@@ -300,11 +300,21 @@ Full-Width Styles
 }
 
 #project_title {
+  display: inline-block;
+}
+
+#project_title img {
+  margin: 0 10px 0 0;
+  display: inline-block;
+}
+
+#project_title h1 {
   margin: 0;
   color: #fff;
   font-size: 42px;
   font-weight: 700;
   text-shadow: #111 0px 0px 10px;
+  display: inline-block;
 }
 
 #project_tagline {
