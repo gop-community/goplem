@@ -11,7 +11,7 @@ A Linkedin app to manage skills in the company. More info on http://gop-communit
 Before running the app, some configuration is needed.
 
 ### Create config.json ###
-You have to create a config.json file in this folder. This file contains ids and keys needed to authenticate on
+You have to create a config.json file in the config folder. This file contains ids and keys needed to authenticate on
 Linkedin's REST API. It **should not** be visible in the public repository.
 
 Example:
