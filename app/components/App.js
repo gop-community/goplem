@@ -1,12 +1,18 @@
-var React = require('react');
-var Login = require('./Login');
+import React from 'react';
+import Login from './Login';
+import {RouteHandler, Link} from 'react-router';
 
-var App = React.createClass({
-  render: function() {
+class App extends React.Component {
+  render() {
     return (
-      <Login />
+      <div>
+        <h1>App</h1>
+        <Link to="/">Return to home</Link>
+        <Link to="map">Go to Map</Link>
+        <RouteHandler/>
+      </div>
     );
   }
-});
+}
 
-module.exports = App;
+export default App;
