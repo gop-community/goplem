@@ -47,7 +47,11 @@ module.exports = {
   },
   devServer: {
     contentBase: './tmp',
-    historyApiFallback: true
+    historyApiFallback: true,
+    proxy: {
+      '/api': 'http://localhost:8081',
+      '/api/*': 'http://localhost:8081'
+    }
   },
   customParams: {
     apiKey: config.apiKey
