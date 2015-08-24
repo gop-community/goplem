@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Goplem</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
   <script type="text/javascript" src="//platform.linkedin.com/in.js">
     api_key: {%= o.webpackConfig.customParams.apiKey %}
     authorize: true
@@ -29,7 +30,6 @@
     function getProfileData() {
       IN.API.Raw("/people/~:(id,first-name,summary,specialties,positions,industry)").result(onSuccess).error(onError);
     }
-
   </script>
 </head>
 <body>
