@@ -11,12 +11,14 @@ class Home extends React.Component {
 
   componentDidMount() {
     var self = this;
-    request.get('/api')
-      .end((err, res) => {
-        self.setState({
-          message: res.body.message
-        });
-      });
+    //request.get('/api')
+    //  .end((err, res) => {
+    //    if (!err) {
+    //      self.setState({
+    //        message: res.body.message
+    //      });
+    //    }
+    //  });
   }
 
   render() {

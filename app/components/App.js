@@ -1,12 +1,16 @@
 import React from 'react';
 import Login from './Login';
 import {RouteHandler, Link} from 'react-router';
-import {AppBar, Styles} from 'material-ui';
-var ThemeManager = Styles.ThemeManager();
+import {AppBar, Styles, FlatButton} from 'material-ui';
+var ThemeManager = new Styles.ThemeManager();
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-  componentDidMount() {
+  componentWillMount() {
     ThemeManager.setTheme(ThemeManager.types.DARK);
   }
 
@@ -18,8 +22,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div class="main-wrapper">
-        <AppBar title="Goplem" />
+      <div className="main-wrapper">
+        <AppBar
+          title="Goplem"
+          iconClassNameRight="muidocs-icon-navigation-expand-more"/>
+        <FlatButton label="Default" />
         <Link to="/">Return to home</Link>
         <Link to="map">Go to Map</Link>
         <RouteHandler/>

@@ -15,30 +15,9 @@ var routes = (
   </Route>
 );
 
-class Wrapper extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { handler: null };
-  }
-  componentDidMount() {
-    Router.run(routes, this.handleNavigation.bind(this));
-  }
-  handleNavigation(Handler) {
-    this.setState({
-      handler: Handler
-    });
-  }
-  render() {
-    if(!this.state.handler) return null;
-
-    var Handler = this.state.handler;
-    return <Handler/>;
-  }
-}
-
-React.render(
-  <Wrapper />,
-  document.getElementById('content')
-);
+Router.run(routes, function (Root) {
+  // whenever the url changes, this callback is called again
+  React.render(<Root/>, document.getElementById('content'));
+});
 
 module.exports = alt;

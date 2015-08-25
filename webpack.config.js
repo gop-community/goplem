@@ -4,6 +4,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
 var appPath = path.join(__dirname, 'app');
+var nodeModulesPath = path.resolve(__dirname, 'node_modules');
 var config = require('./config/config');
 
 if (!config) {
@@ -17,11 +18,11 @@ if (config && !config.apiKey) {
 module.exports = {
   entry: {
     module: path.join(appPath, 'app.js'),
-    common: ['react', 'react-router', 'alt']
+    common: ['react', 'react-router', 'alt', 'material-ui']
   },
   resolve: {
     root: appPath,
-    extensions: ['', '.js'],
+    extensions: ['', '.js', '.jsx'],
     modulesDirectories: ['node_modules', 'app']
   },
   plugins: [
@@ -38,7 +39,7 @@ module.exports = {
   ],
   module: {
     loaders: [
-      {test: /\.js?$/, exclude: /node_modules/, loader: 'babel?cacheDirectory'}
+      {test: /\.(js|jsx)$/, exclude: [nodeModulesPath], loader: 'babel?cacheDirectory'}
     ]
   },
   output: {
