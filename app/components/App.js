@@ -13,7 +13,7 @@ class App extends React.Component {
   }
 
   componentWillMount() {
-    ThemeManager.setTheme(ThemeManager.types.DARK);
+    ThemeManager.setTheme(ThemeManager.types.LIGHT);
   }
 
   getChildContext() {
@@ -48,7 +48,9 @@ class App extends React.Component {
                  docked={false}
                  menuItems={menuItems}
                  onChange={this._onLeftNavChange}/>
-        <RouteHandler/>
+        <div className="container-fluid">
+          <RouteHandler/>
+        </div>
       </div>
     );
   }

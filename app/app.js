@@ -4,9 +4,11 @@ import App from './components/App';
 import Home from './components/Home';
 import Map from './components/Map';
 import Router from 'react-router';
+import FlexBoxGrid from 'flexboxgrid/dist/flexboxgrid.min.css';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
 var {Route, DefaultRoute} = Router;
 
-import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
 var alt = new Alt();

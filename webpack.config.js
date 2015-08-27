@@ -39,7 +39,8 @@ module.exports = {
   ],
   module: {
     loaders: [
-      {test: /\.(js|jsx)$/, exclude: [nodeModulesPath], loader: 'babel?cacheDirectory'}
+      {test: /\.(js|jsx)$/, exclude: [nodeModulesPath], loader: 'babel?cacheDirectory'},
+      { test: /\.css$/, loader: 'style-loader!css-loader' }
     ]
   },
   output: {
