@@ -6,6 +6,9 @@ import Map from './components/Map';
 import Router from 'react-router';
 var {Route, DefaultRoute} = Router;
 
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
+
 var alt = new Alt();
 
 var routes = (
