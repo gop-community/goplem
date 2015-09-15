@@ -35,7 +35,7 @@ class Home extends React.Component {
     return (
       <div>
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-4 col-xs-12">
             <div className="box">
               <Card>
                 <CardHeader
@@ -58,7 +58,7 @@ class Home extends React.Component {
               </Card>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 col-xs-12">
             <div className="box">
               <Card>
                 <CardHeader

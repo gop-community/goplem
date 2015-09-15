@@ -1,6 +1,17 @@
 @import "./variables.scss";
 @import "./header.scss";
 
+body {
+  margin: 0;
+  font-size: 13px;
+  line-height: 20px;
+}
+
 .container-fluid {
   padding: 0;
+}
+
+#content {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
 }
