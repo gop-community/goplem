@@ -40,14 +40,16 @@ class App extends React.Component {
 
     return (
       <div className="main-wrapper">
-        <AppBar
-          title="Goplem"
-          iconClassNameRight="muidocs-icon-navigation-expand-more"
-          onLeftIconButtonTouchTap={this._handleClick}/>
-        <LeftNav ref="leftNav"
-                 docked={false}
-                 menuItems={menuItems}
-                 onChange={this._onLeftNavChange}/>
+        <header>
+          <AppBar
+            title="Goplem"
+            iconClassNameRight="muidocs-icon-navigation-expand-more"
+            onLeftIconButtonTouchTap={this._handleClick}/>
+          <LeftNav ref="leftNav"
+                   docked={false}
+                   menuItems={menuItems}
+                   onChange={this._onLeftNavChange}/>
+        </header>
         <div className="container-fluid">
           <RouteHandler/>
         </div>

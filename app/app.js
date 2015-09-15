@@ -6,6 +6,7 @@ import Map from './components/Map';
 import Router from 'react-router';
 import FlexBoxGrid from 'flexboxgrid/dist/flexboxgrid.min.css';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import MainStyle from './assets/styles/main.scss';
 
 var {Route, DefaultRoute} = Router;
 
