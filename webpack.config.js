@@ -18,12 +18,12 @@ if (config && !config.apiKey) {
 module.exports = {
   entry: {
     module: path.join(appPath, 'app.js'),
-    common: ['react', 'react-router', 'alt', 'material-ui']
+    common: ['react', 'react-router', 'material-ui', 'alt']
   },
   resolve: {
     root: appPath,
     extensions: ['', '.js', '.jsx'],
-    modulesDirectories: ['node_modules', 'app']
+    modulesDirectories: ['app', 'node_modules']
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
