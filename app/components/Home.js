@@ -1,14 +1,9 @@
 import React from 'react';
 import request from 'superagent';
 import {
-  Card,
-  CardHeader,
-  Avatar,
-  CardMedia,
-  CardTitle,
-  CardActions,
-  CardText,
-  FlatButton
+  TextField,
+  FontIcon,
+  Avatar
 } from 'material-ui';
 
 class Home extends React.Component {
@@ -33,55 +28,15 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="row">
-          <div className="col-md-4 col-xs-12">
-            <div className="box">
-              <Card>
-                <CardHeader
-                  title="Title"
-                  subtitle="Subtitle"
-                  avatar={<Avatar>A</Avatar>}/>
-                <CardHeader
-                  title="Demo Url Based Avatar"
-                  subtitle="Subtitle"
-                  avatar="http://lorempixel.com/100/100/nature/"/>
-                <CardTitle title="Title" subtitle="Subtitle"/>
-                <CardActions>
-                  <FlatButton label="Action1"/>
-                  <FlatButton label="Action2"/>
-                </CardActions>
-                <CardText>
-                  <p>This is home</p>
-                  <p>Message from the api: {this.state.message}</p>
-                </CardText>
-              </Card>
-            </div>
-          </div>
-          <div className="col-md-4 col-xs-12">
-            <div className="box">
-              <Card>
-                <CardHeader
-                  title="Test"
-                  subtitle="Retest"
-                  avatar={<Avatar>A</Avatar>}/>
-                <CardHeader
-                  title="Demo Url Based Avatar"
-                  subtitle="Subtitle"
-                  avatar="http://lorempixel.com/100/100/nature/"/>
-                <CardTitle title="Title" subtitle="Subtitle"/>
-                <CardActions>
-                  <FlatButton label="Action1"/>
-                  <FlatButton label="Action2"/>
-                </CardActions>
-                <CardText>
-                  <p>This is home</p>
-                  <p>Message from the api: {this.state.message}</p>
-                </CardText>
-              </Card>
-            </div>
-          </div>
-        </div>
+      <div className="home-search">
+        <Avatar
+          icon={
+            <FontIcon className="material-icons">search</FontIcon>
+          }
+          className="home-search-icon"/>
+        <TextField
+          hintText="Search something"
+          className="home-search-field"/>
       </div>
     );
   }

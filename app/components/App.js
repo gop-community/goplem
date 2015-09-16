@@ -35,7 +35,7 @@ class App extends React.Component {
   render() {
     var menuItems = [
       { route: '/', text: 'Home' },
-      { route: '/map', text: 'Map' }
+      { route: '/users', text: 'Users' }
     ];
 
     return (
@@ -44,7 +44,8 @@ class App extends React.Component {
           <AppBar
             title="Goplem"
             iconClassNameRight="muidocs-icon-navigation-expand-more"
-            onLeftIconButtonTouchTap={this._handleClick}/>
+            onLeftIconButtonTouchTap={this._handleClick}
+            zDepth="0"/>
           <LeftNav ref="leftNav"
                    docked={false}
                    menuItems={menuItems}
