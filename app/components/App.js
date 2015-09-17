@@ -14,6 +14,11 @@ class App extends React.Component {
 
   componentWillMount() {
     ThemeManager.setTheme(ThemeManager.types.LIGHT);
+    ThemeManager.setComponentThemes({
+      textField: {
+        hintColor: 'rgba(0, 0, 0, 0.87)'
+      }
+    });
   }
 
   getChildContext() {

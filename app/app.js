@@ -2,6 +2,7 @@ import React from 'react';
 import App from './components/App';
 import Home from './components/Home';
 import Users from './components/Users';
+import UsersCreate from './components/UsersCreate';
 import Router from 'react-router';
 import FlexBoxGrid from 'flexboxgrid/dist/flexboxgrid.min.css';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -16,6 +17,7 @@ var routes = (
   <Route handler={App} path="/">
     <DefaultRoute handler={Home} />
     <Route name="users" path="/users" handler={Users} />
+    <Route name="users-create" path="/users/create" handler={UsersCreate} />
   </Route>
 );
 

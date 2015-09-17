@@ -16,6 +16,40 @@ body {
   padding: 20px;
 }
 
+.button-primary {
+  .material-icons {
+    float: left;
+    vertical-align: middle;
+    padding-left: 10px;
+    line-height: 36px;
+    color: white!important;
+  }
+}
+
+.form-group {
+  > div {
+    width: 246px!important;
+  }
+  .material-icons {
+    top: 7px;
+    margin-right: 10px;
+  }
+}
+
+.button-bar {
+  margin-top: 15px;
+  float: right;
+
+  div {
+    float: left;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
 #content {
   height: 100%;
   -webkit-font-smoothing: antialiased;
