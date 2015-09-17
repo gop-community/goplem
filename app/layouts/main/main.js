@@ -1,5 +1,4 @@
 import React from 'react';
-import Login from './Login';
 import {RouteHandler, Link} from 'react-router';
 import {AppBar, LeftNav, Styles, FlatButton} from 'material-ui';
 var ThemeManager = new Styles.ThemeManager();

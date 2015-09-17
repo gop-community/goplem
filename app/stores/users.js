@@ -1,5 +1,5 @@
 import alt from '../libs/alt';
-import UsersActions from '../actions/UsersActions';
+import UsersActions from '../actions/users';
 
 class UsersStore {
   constructor() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import UsersStore from '../stores/UsersStore';
+import UsersStore from '../../stores/users';
 import {
   List,
   ListItem,

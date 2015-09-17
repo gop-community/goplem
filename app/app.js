@@ -1,8 +1,8 @@
 import React from 'react';
-import App from './components/App';
-import Home from './components/Home';
-import Users from './components/Users';
-import UsersCreate from './components/UsersCreate';
+import MainLayout from './layouts/main/main';
+import Home from 'pages/home/main';
+import Users from 'pages/users/main';
+import UsersCreate from 'pages/users/create';
 import Router from 'react-router';
 import FlexBoxGrid from 'flexboxgrid/dist/flexboxgrid.min.css';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -14,7 +14,7 @@ var {Route, DefaultRoute} = Router;
 injectTapEventPlugin();
 
 var routes = (
-  <Route handler={App} path="/">
+  <Route handler={MainLayout} path="/">
     <DefaultRoute handler={Home} />
     <Route name="users" path="/users" handler={Users} />
     <Route name="users-create" path="/users/create" handler={UsersCreate} />
