@@ -3,9 +3,9 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
-var appPath = path.join(__dirname, 'app');
+var appPath = path.join(__dirname, '../app');
 var nodeModulesPath = path.resolve(__dirname, 'node_modules');
-var config = require('./config/config');
+var config = require('../config/config');
 
 if (!config) {
   console.warn('config/config.json is missing. Please read config/README.md for further instruction.');
