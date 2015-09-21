@@ -16,14 +16,14 @@ class Home extends React.Component {
 
   componentDidMount() {
     var self = this;
-    //request.get('/api')
-    //  .end((err, res) => {
-    //    if (!err) {
-    //      self.setState({
-    //        message: res.body.message
-    //      });
-    //    }
-    //  });
+    request.get('/api')
+      .end((err, res) => {
+        if (!err) {
+          self.setState({
+            message: res.body.message
+          });
+        }
+      });
   }
 
   render() {
@@ -37,6 +37,7 @@ class Home extends React.Component {
         <TextField
           hintText="Search something"
           className="home-search-field"/>
+        <p>Message from the API: {this.state.message}</p>
       </div>
     );
   }

@@ -7,7 +7,6 @@ var app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-var port = 8081; // process.env.PORT
 var router = express.Router();
 
 router.get('/', function(req, res) {
@@ -17,15 +16,8 @@ router.get('/', function(req, res) {
 // Prefix all routes with /api
 app.use('/api', router);
 
-// Start the server
-app.listen(port, function() {
-  console.log('The Goplem server is running on port ' + port);
-});
-
 // ----------
 // BASIC API
 // ----------
-
-
 
 module.exports = app;

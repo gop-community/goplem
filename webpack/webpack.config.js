@@ -45,16 +45,8 @@ module.exports = {
     ]
   },
   output: {
-    path: './dist',
+    path: path.resolve('./dist'),
     filename: 'bundle.js'
-  },
-  devServer: {
-    contentBase: './tmp',
-    historyApiFallback: true,
-    proxy: {
-      '/api': 'http://localhost:8081',
-      '/api/*': 'http://localhost:8081'
-    }
   },
   customParams: {
     apiKey: config.apiKey
