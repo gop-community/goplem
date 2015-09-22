@@ -1,11 +1,8 @@
 # goplem
 A Linkedin app to manage skills in the company. More info on http://gop-community.github.io/goplem
 
-## Launch ##
-`npm run watch`, then open localhost:8080
-
-## Build ##
-`npm run build`, then open localhost:8080
+## Dev ##
+`gulp watch`, then open localhost:8080
 
 ## Configuration ##
 Before running the app, some configuration is needed.
