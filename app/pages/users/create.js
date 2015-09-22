@@ -1,4 +1,5 @@
 import React from 'react';
+import FormGroup from '../../components/form-group';
 import {
   TextField,
   FontIcon,
@@ -12,19 +13,19 @@ class Users extends React.Component {
 
   render() {
     return (
-      <div class="users-create">
+      <div>
         <h1>Create a new user</h1>
         <form no-validate>
-          <div className="form-group">
+          <FormGroup>
             <FontIcon className="material-icons">person</FontIcon>
             <TextField
               hintText="Name"/>
-          </div>
-          <div className="form-group">
+          </FormGroup>
+          <FormGroup>
             <FontIcon className="material-icons">business</FontIcon>
             <TextField
               hintText="Business Unit"/>
-          </div>
+          </FormGroup>
           <div className="button-bar">
             <RaisedButton linkButton="true" href="#/users" label="Cancel">
             </RaisedButton>

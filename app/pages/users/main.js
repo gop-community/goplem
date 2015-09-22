@@ -1,11 +1,11 @@
 import React from 'react';
 import UsersStore from '../../stores/users';
+import RaisedButtonIcon from '../../components/raised-button-icon';
 import {
   List,
   ListItem,
   FontIcon,
-  Avatar,
-  RaisedButton
+  Avatar
 } from 'material-ui';
 
 class Users extends React.Component {
@@ -31,13 +31,13 @@ class Users extends React.Component {
     return (
       <div class="users">
         <h1>Users</h1>
-        <RaisedButton className="button-primary"
-                      linkButton={true}
-                      href="#/users/create"
-                      primary={true}
-                      label="Create a new user">
+        <RaisedButtonIcon className="button-primary"
+                          linkButton={true}
+                          href="#/users/create"
+                          primary={true}
+                          label="Create a new user">
           <FontIcon className="material-icons">person_add</FontIcon>
-        </RaisedButton>
+        </RaisedButtonIcon>
         <List>
           {
             this.state.users.map((user) => {
