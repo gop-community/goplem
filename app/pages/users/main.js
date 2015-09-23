@@ -35,8 +35,10 @@ class Users extends React.Component {
                           linkButton={true}
                           href="#/users/create"
                           primary={true}
-                          label="Create a new user">
-          <FontIcon className="material-icons">person_add</FontIcon>
+                          label="Create a new user"
+                          icon={
+                            <FontIcon className="material-icons">person_add</FontIcon>
+                          }>
         </RaisedButtonIcon>
         <List>
           {

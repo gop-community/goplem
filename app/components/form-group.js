@@ -6,17 +6,24 @@ class FormGroup extends React.Component {
   }
 
   render() {
+    var avatar = this.props.avatar;
+    var icon = this.props.icon;
+    var textField = this.props.textField;
+
+    if (avatar) {
+      avatar.props.style = styles.avatar;
+    }
+    else if (icon) {
+      icon.props.style = styles.avatar;
+    }
+    if (textField) {
+      textField.props.style = styles.textField;
+    }
+
     return (
       <div>
-        {this.props.children.map(function(child) {
-          if (child.type.displayName === 'Avatar' || child.type.displayName === 'FontIcon') {
-            child.props.style = styles.avatar;
-          }
-          else if (child.type.displayName === 'TextField') {
-            child.props.style = styles.field;
-          }
-          return {child};
-        })}
+        {avatar || icon}
+        {textField}
       </div>
     );
   }
@@ -27,8 +34,8 @@ var styles = {
     top: '7px',
     marginRight: '10px'
   },
-  field: {
-    width: '246px'
+  textField: {
+    width: '200px'
   }
 };
 

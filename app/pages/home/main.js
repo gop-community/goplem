@@ -30,14 +30,18 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <FormGroup>
-          <Avatar
-            icon={
-              <FontIcon className="material-icons">search</FontIcon>
-            }
-            className="home-search-icon"/>
-          <TextField
-            hintText="Search something"/>
+        <FormGroup
+          avatar={
+            <Avatar
+              icon={
+                <FontIcon className="material-icons">search</FontIcon>
+              }
+              className="home-search-icon"/>
+          }
+          textField={
+            <TextField
+              hintText="Search something"/>
+          }>
         </FormGroup>
         <p>Message from the API: {this.state.message}</p>
       </div>

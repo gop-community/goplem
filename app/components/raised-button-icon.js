@@ -9,10 +9,13 @@ class RaisedButtonIcon extends React.Component {
   }
 
   render() {
-    this.props.children.props.style = styles.icon;
+    var icon = this.props.icon;
+    if (icon) {
+      icon.props.style = styles.icon;
+    }
     return (
       <RaisedButton {...this.props}>
-        {this.props.children}
+        {icon}
       </RaisedButton>
     );
   }
