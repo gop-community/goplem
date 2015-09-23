@@ -37,11 +37,9 @@ class Home extends React.Component {
                 <FontIcon className="material-icons">search</FontIcon>
               }
               className="home-search-icon"/>
-          }
-          textField={
-            <TextField
-              hintText="Search something"/>
           }>
+          <TextField
+            hintText="Search something"/>
         </FormGroup>
         <p>Message from the API: {this.state.message}</p>
       </div>

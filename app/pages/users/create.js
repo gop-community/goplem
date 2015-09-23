@@ -17,22 +17,14 @@ class Users extends React.Component {
         <h1>Create a new user</h1>
         <form no-validate>
           <FormGroup
-            icon={
-              <FontIcon className="material-icons">person</FontIcon>
-            }
-            textField={
-              <TextField
+            icon="person">
+            <TextField
               hintText="Name"/>
-            }>
           </FormGroup>
           <FormGroup
-            icon={
-              <FontIcon className="material-icons">business</FontIcon>
-            }
-            textField={
-              <TextField
+            icon="business">
+            <TextField
               hintText="Business Unit"/>
-            }>
           </FormGroup>
           <div className="button-bar">
             <RaisedButton linkButton="true" href="#/users" label="Cancel">

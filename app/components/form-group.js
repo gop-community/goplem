@@ -1,4 +1,21 @@
 import React from 'react';
+import {
+  FontIcon
+} from 'material-ui';
+
+var styles = {
+  avatar: {
+    top: '7px',
+    marginRight: '10px'
+  },
+  icon: {
+    top: '7px',
+    marginRight: '10px'
+  },
+  input: {
+    width: '200px'
+  }
+};
 
 class FormGroup extends React.Component {
   constructor(props) {
@@ -8,35 +25,23 @@ class FormGroup extends React.Component {
   render() {
     var avatar = this.props.avatar;
     var icon = this.props.icon;
-    var textField = this.props.textField;
+    var input = this.props.children;
 
     if (avatar) {
       avatar.props.style = styles.avatar;
     }
-    else if (icon) {
-      icon.props.style = styles.avatar;
-    }
-    if (textField) {
-      textField.props.style = styles.textField;
+    if (input) {
+      input.props.style = styles.input;
     }
 
     return (
       <div>
-        {avatar || icon}
-        {textField}
+        {!icon && avatar}
+        {!avatar && icon && <FontIcon className="material-icons" style={styles.avatar}>{this.props.icon}</FontIcon>}
+        {this.props.children}
       </div>
     );
   }
 }
-
-var styles = {
-  avatar: {
-    top: '7px',
-    marginRight: '10px'
-  },
-  textField: {
-    width: '200px'
-  }
-};
 
 export default FormGroup;
