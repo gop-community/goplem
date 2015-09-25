@@ -1,0 +1,8 @@
+{
+  "databases": {
+    "mongo": {
+      "name": "goplem",
+      "address": "localhost"
+    }
+  }
+}
